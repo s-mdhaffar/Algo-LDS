@@ -1,0 +1,34 @@
+ALGORITHM Algo-LDS
+VAR
+    set1 : ARRAY_OF INTEGER[n];
+    set2 : ARRAY_OF INTEGER[m];
+    sum:INTEGER:=0;
+    i:INTEGER;
+    j:INTEGER;
+BEGIN
+    Read(n);
+    Read(m);
+    FOR i FROM 0 TO set1.length-1 STEP 1  DO
+    test:BOOLEAN:=false;
+        FOR j FROM 0 TO set2.length-1 STEP 1  DO
+            IF (set1[i]=set2[j]) THEN
+                test:=true;
+            END_IF
+        END_FOR
+        IF (test=false) THEN
+            sum=sum+set1[i];
+        END_IF
+    END_FOR
+    FOR i FROM 0 TO set2.length-1 STEP 1  DO
+    test:BOOLEAN:=false;
+        FOR j FROM 0 TO set1.length-1 STEP 1  DO
+            IF (set2[i]=set1[j]) THEN
+                test:=true;
+            END_IF
+        END_FOR
+        IF (test=false) THEN
+            sum=sum+set2[i];
+        END_IF
+    END_FOR
+    Write(sum);
+END
