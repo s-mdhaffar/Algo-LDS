@@ -5,6 +5,8 @@ VAR
     sum:INTEGER:=0;
     i:INTEGER;
     j:INTEGER;
+    n:INTEGER;
+    m:INTEGER;
 BEGIN
     Read(n);
     Read(m);
